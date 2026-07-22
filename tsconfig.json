@@ -19,7 +19,7 @@
       }
     ],
     "paths": {
-      "@/*": ["./*"]
+        "@/*": ["./src/*"]
     }
   },
   "include": [
@@ -30,6 +30,6 @@
     "**/*.mts",
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts"
-  ],
+, "src/app/(dashboard)/ranks/UpdateRank.tsx"  ],
   "exclude": ["node_modules"]
 }
