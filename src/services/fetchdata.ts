@@ -1,6 +1,6 @@
 import { AxiosInstance } from "axios";
 import { APIS } from "@/lib/config"
-import { DandR, Department, FileRecord, Rank, User, DashStats, DashGraph, LanduseType, PurposeType, LanduseAndPurpose } from "@/lib/types"
+import { DandR, Department, FileRecord, UserCount, Rank, User, DashStats, DashGraph, LanduseType, PurposeType, LanduseAndPurpose } from "@/lib/types"
 
 
 export async function getDepartmentsRequest(axiosPrivate: AxiosInstance): Promise<Department[]> {
@@ -82,6 +82,16 @@ export async function getDashGraphRequest(axiosPrivate: AxiosInstance): Promise<
   return response.data.data;
 } 
 
+export async function getFilesCountRequest(axiosPrivate: AxiosInstance): Promise<UserCount[]> {
+
+  const { getFilesCountsByUser: { path } } = APIS;
+  const response = await axiosPrivate.get(path);
+
+  if (response.data.meta.status !== 200)
+    throw "Failed to fetch";
+
+  return response.data.data;
+} 
 export async function getLandusesRequest(axiosPrivate: AxiosInstance): Promise<LanduseType[]> {
 
   const { getLanduse: { path } } = APIS;

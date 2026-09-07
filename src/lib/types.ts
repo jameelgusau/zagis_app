@@ -21,7 +21,11 @@ export interface PurposeType {
   id: string;
 }
 
-
+export interface UserCount {
+  id: string;
+  totalFiles: string;
+  full_name: string
+}
 export interface LanduseAndPurpose {
   id: string;
   landuse_name: string;

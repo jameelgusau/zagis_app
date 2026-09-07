@@ -23,9 +23,9 @@ import { DataTablePagination } from "./DataTablePagination"
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[]
   data: TData[]
-  globalFilter: string
+  globalFilter?: string
   // setGlobalFilter: 
-  setGlobalFilter: (filter: string) => void
+  setGlobalFilter?: (filter: string) => void
 }
 
 export function DataTable<TData, TValue>({
@@ -52,7 +52,7 @@ export function DataTable<TData, TValue>({
     <div>
       <div className="overflow-hidden mx-3 sm:mx-5">
         <Table>
-          <TableHeader>
+          <TableHeader className="[&_tr]:border-b bg-primary [&_th]:text-white dark:bg-[#0d0d0db9]">
             {table.getHeaderGroups().map((headerGroup) => (
               <TableRow key={headerGroup.id}>
                 {headerGroup.headers.map((header) => {

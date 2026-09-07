@@ -1,7 +1,7 @@
 
 export const APIS = {
-    // baseURL: "http://localhost:7070",
-    baseURL: "http://192.168.1.47:7070",
+    baseURL: "http://localhost:7071",
+    // baseURL: "http://192.168.1.47:7070",
     verifytoken: {
         method: "POST",
         path: "/api/verify-email",
@@ -137,6 +137,10 @@ export const APIS = {
     getLanduseAndPurpose: {
         method: "GET",
         path: "/api/landuses_purposes"
+    },
+     getFilesCountsByUser: {
+        method: "GET",
+        path: "/api/files-counts-by-user"
     },
     updateCaregiver: {
         method: "PUT",
