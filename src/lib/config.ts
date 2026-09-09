@@ -1,7 +1,7 @@
 
 export const APIS = {
     // baseURL: "http://localhost:7071",
-    baseURL: "http://192.168.1.47:7071",
+    baseURL: "http://192.168.1.147:7071",
     verifytoken: {
         method: "POST",
         path: "/api/verify-email",
