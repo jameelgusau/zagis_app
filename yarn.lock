@@ -3735,6 +3735,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"cn@npm:^0.5.2":
+  version: 0.5.2
+  resolution: "cn@npm:0.5.2"
+  bin:
+    cn: bin/cn.mjs
+  checksum: 10c0/8ace6457ae6094658f75c6795ad1ce73f4bd75e0134cc93a1d3514d83b1be1ab1bb75eba8c295b27302cf9a5dff6582ac105870e862aa2af2205b52a9371a353
+  languageName: node
+  linkType: hard
+
 "code-block-writer@npm:^13.0.3":
   version: 13.0.3
   resolution: "code-block-writer@npm:13.0.3"
@@ -6442,12 +6451,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lucide-react@npm:^1.21.0":
-  version: 1.21.0
-  resolution: "lucide-react@npm:1.21.0"
+"lucide-react@npm:^1.75.0":
+  version: 1.75.0
+  resolution: "lucide-react@npm:1.75.0"
   peerDependencies:
+    "@types/react": "*"
     react: ^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0
-  checksum: 10c0/55f914e3bc06425064efb4d4d77031c2565294910c362ffd1f5b2eaabd8ee31d682b5749dde5e1d3071ecbf625bbce0d810d1a271a27ecc60b50e908a4f6133d
+  peerDependenciesMeta:
+    "@types/react":
+      optional: true
+  checksum: 10c0/05b78e961ebf87e6a03901655148c629465165e341ca5d2288dc7e4d1feeeb12a4cc26cfa09cbe94eb14d79189c52de97fde6880c7e5ead46763d2a7bf3b77b8
   languageName: node
   linkType: hard
 
@@ -9073,11 +9086,12 @@ __metadata:
     axios: "npm:^1.18.1"
     class-variance-authority: "npm:^0.7.1"
     clsx: "npm:^2.1.1"
+    cn: "npm:^0.5.2"
     date-fns: "npm:^4.4.0"
     eslint: "npm:^9"
     eslint-config-next: "npm:16.2.6"
     immer: "npm:^11.1.8"
-    lucide-react: "npm:^1.21.0"
+    lucide-react: "npm:^1.75.0"
     next: "npm:16.2.6"
     next-themes: "npm:^0.4.6"
     prettier: "npm:^3.8.3"

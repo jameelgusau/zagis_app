@@ -1,7 +1,7 @@
 
 export const APIS = {
-    // baseURL: "http://localhost:7071",
-    baseURL: "http://192.168.1.147:7071",
+    baseURL: "http://localhost:7071",
+    // baseURL: "http://192.168.1.147:7071",
     verifytoken: {
         method: "POST",
         path: "/api/verify-email",
@@ -138,7 +138,7 @@ export const APIS = {
         method: "GET",
         path: "/api/landuses_purposes"
     },
-     getFilesCountsByUser: {
+    getFilesCountsByUser: {
         method: "GET",
         path: "/api/files-counts-by-user"
     },
@@ -235,5 +235,45 @@ export const APIS = {
     addAttendace: {
         method: "POST",
         path: "/api/attendance"
+    },
+    addZone: {
+        method: "POST",
+        path: "/api/zone"
+    },
+    updateZone: {
+        method: "PUT",
+        path: "/api/zone"
+    },
+    getZones: {
+        method: "GET",
+        path: "/api/zones"
+    },
+    deleteZone: {
+        method: "DELETE",
+        path: ({ id }: { id: string }) => `/api/zone/${id}`,
+    },
+    getZone: {
+        method: "GET",
+        path: ({ id }: { id: string }) => `/api/zone/${id}`,
+    },
+    addLga: {
+        method: "POST",
+        path: "/api/lga"
+    },
+    updateLga: {
+        method: "PUT",
+        path: "/api/lga"
+    },
+    getLgas: {
+        method: "GET",
+        path: "/api/lgas"
+    },
+    deleteLga: {
+        method: "DELETE",
+        path: ({ id }: { id: string }) => `/api/lga/${id}`,
+    },
+    getLga: {
+        method: "GET",
+        path: ({ id }: { id: string }) => `/api/lga/${id}`,
     }
 }

@@ -97,9 +97,10 @@ import {
   LucideIcon,
   Landmark,
   ShieldHalf,
-  // Settings,
+  Settings,
   // MapPinHouse,
   // Bell,
+  UserRoundShield,
   Archive
 } from "lucide-react";
 
@@ -178,7 +179,7 @@ export function getMenuList(): Group[] {
             }
           ]
         },
-                {
+        {
           href: "",
           label: "Town Planing",
           icon: Calendar,
@@ -193,66 +194,50 @@ export function getMenuList(): Group[] {
             }
           ]
         },
-        // {
-        //   href: "/schools",
-        //   label: "Schools",
-        //   icon: School
-        // },
         {
-          href: "/users",
-          label: "Users",
-          icon: Users
+          href: "",
+          label: "Admin Department",
+          icon: UserRoundShield,
+          submenus: [
+            {
+              href: "/users",
+              label: "Users",
+            },
+            {
+              href: "/departments",
+              label: "Departments",
+            },
+            {
+              href: "/ranks",
+              label: "Ranks",
+            }
+          ]
         },
-        {
-          href: "/departments",
-          label: "Departments",
-          icon: Landmark
-        },
-        {
-          href: "/ranks",
-          label: "Ranks",
-          icon: ShieldHalf
+         {
+          href: "",
+          label: "Settings",
+          icon: Settings,
+          submenus: [
+            {
+              href: "/zones",
+              label: "Zones"
+            },
+            {
+              href: "/classes",
+              label: "Classes"
+            },
+            {
+              href: "/terms",
+              label: "Terms"
+            }
+          ]
         },
         // {
         //   href: "/notifications",
         //   label: "Notifications",
         //   icon: Bell
         // },
-        // {
-        //   href: "",
-        //   label: "Settings",
-        //   icon: Settings,
-        //   submenus: [
-        //     {
-        //       href: "/transferbeneficiaries",
-        //       label: "Transfer Beneficiaries"
-        //     },
-        //     {
-        //       href: "/classes",
-        //       label: "Classes"
-        //     },
-        //     {
-        //       href: "/terms",
-        //       label: "Terms"
-        //     },
-        //     {
-        //       href: "/breaks",
-        //       label: "Breaks"
-        //     },
-        //     {
-        //       href: "/cohorts",
-        //       label: "Cohorts"
-        //     },
-        //     {
-        //       href: "/accountsettings",
-        //       label: "Account Settings"
-        //     },
-        //     {
-        //       href: "/attendencethreshold",
-        //       label: "Attendence Threshold"
-        //     }
-        //   ]
-        // },
+       
       ]
     },
     // {

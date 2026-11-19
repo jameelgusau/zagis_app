@@ -78,6 +78,12 @@ export interface LanduseType {
   id: string;
 }
 
+export interface Zone {
+  name: string;
+  id: string;
+  description?: string;
+}
+
 export interface DashStats {
   files: number;
   accounts: number;

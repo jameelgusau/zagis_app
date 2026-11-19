@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import { User, Department, FileRecord, Rank, DandR , PurposeType} from "@/lib/types";
+import { User, Department, FileRecord, Rank, DandR , PurposeType, Zone } from "@/lib/types";
 
 interface DashboardState {
     users: User[]
@@ -14,8 +14,8 @@ interface DashboardState {
     setDandRs: (dandrs: DandR[]) => void;
     purposes: PurposeType[];
     setPurposes: (purposes: PurposeType[]) => void;
-    // caregivers: Caregiver[];
-    // setCaregivers: (caregivers: Caregiver[]) => void;
+    zones: Zone[];
+    setZones: (zones: Zone[]) => void;
     // beneficiaries: Beneficiary[];
     // setBeneficiaries: (caregivers: Beneficiary[]) => void;
     // terms: Term[];
@@ -35,7 +35,8 @@ export const useDashboardStore = create<DashboardState>((set) => ({
     setDandRs: (dandrs) => set({ dandrs }),
     purposes: [],
     setPurposes: (purposes) => set({ purposes }),
-    //  beneficiaries: [],
+    zones: [],
+    setZones: (zones) => set({ zones }),
     // setBeneficiaries: (beneficiaries) => set({ beneficiaries }),
     // terms: [],
     // setTerms: (terms) => set({ terms })
