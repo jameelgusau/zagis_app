@@ -26,6 +26,14 @@ export interface UserCount {
   totalFiles: string;
   full_name: string
 }
+
+export interface Lga {
+  id: string;
+  name: string;
+  zone_name?: string;
+  zone_id: string;
+}
+
 export interface LanduseAndPurpose {
   id: string;
   landuse_name: string;
@@ -71,6 +79,11 @@ export interface FileRecord {
   collection_date?: Date | null;
   createdAt?: Date | null;
   updatedAt?: Date | null;
+}
+
+export interface Lgas {
+  name: string;
+  id: string;
 }
 
 export interface LanduseType {

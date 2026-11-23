@@ -223,11 +223,11 @@ export function getMenuList(): Group[] {
               label: "Zones"
             },
             {
-              href: "/classes",
-              label: "Classes"
+              href: "/lgas",
+              label: "Local Government Areas"
             },
             {
-              href: "/terms",
+              href: "/",
               label: "Terms"
             }
           ]

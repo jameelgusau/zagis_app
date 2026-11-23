@@ -76,7 +76,6 @@ export function UpdateRank({ open, setOpen, selected }: { open: boolean, setOpen
       reset({
         department: departmentType,
 
-
       })
     }
       // eslint-disable-next-line react-hooks/exhaustive-deps

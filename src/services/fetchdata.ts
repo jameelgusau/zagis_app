@@ -1,6 +1,17 @@
 import { AxiosInstance } from "axios";
 import { APIS } from "@/lib/config"
-import { DandR, Department, FileRecord, UserCount, Rank, User, DashStats, DashGraph, LanduseType, PurposeType, LanduseAndPurpose, Zone } from "@/lib/types"
+import { DandR, Department, FileRecord, UserCount, Rank, User, DashStats, DashGraph, LanduseType, PurposeType, LanduseAndPurpose, Zone, Lga } from "@/lib/types"
+
+export async function getLgasRequest(axiosPrivate: AxiosInstance): Promise<Lga[]> {
+  const { getLgas: { path } } = APIS;
+
+  const response = await axiosPrivate.get(path);
+
+  if (response.data.meta.status !== 200)
+    return [];
+
+  return response.data.data;
+}
 
 export async function getZonesRequest(axiosPrivate: AxiosInstance): Promise<Zone[]> {
   const { getZones: { path } } = APIS;
