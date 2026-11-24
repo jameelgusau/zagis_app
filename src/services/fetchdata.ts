@@ -5,7 +5,7 @@ import { DandR, Department, FileRecord, UserCount, Rank, User, DashStats, DashGr
 export async function getLgasRequest(axiosPrivate: AxiosInstance): Promise<Lga[]> {
   const { getLgas: { path } } = APIS;
 
-  const response = await axiosPrivate.get(path);
+  const response = await axiosPrivate(path);
 
   if (response.data.meta.status !== 200)
     return [];

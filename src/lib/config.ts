@@ -275,5 +275,9 @@ export const APIS = {
     getLga: {
         method: "GET",
         path: ({ id }: { id: string }) => `/api/lga/${id}`,
+    },
+    getGroundRentRates: {
+        method: "GET",
+        path: "/api/ground-rent-rate"
     }
 }
